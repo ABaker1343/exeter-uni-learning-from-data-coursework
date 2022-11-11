@@ -1,0 +1,37 @@
+﻿﻿Title:,"Figure 3 - HE student enrolments by level of study"
+Subtitle:,"Academic years 2016/17 to 2020/21"
+Reference ID:,SB262 Figure 3
+Data source:,HESA
+Data source link:,https://www.hesa.ac.uk/data-and-analysis/sb262/figure-3
+Data file canonical link:,https://www.hesa.ac.uk/data-and-analysis/sb262/figure-3.csv
+Licence:,Creative Commons Attribution 4.0 International Licence
+Date:,2022
+Filters:,Country of HE provider,All 
+,Mode of study,All 
+,First year marker,All 
+,Sex,All 
+,Domicile,All 
+
+
+"Level of Study","2016/17","2017/18","2018/19","2019/20","2020/21"
+"Postgraduate"
+"Doctorate research","100,085","100,520","101,995","101,350","104,965"
+"Other postgraduate research","12,120","11,000","10,615","9,000","9,235"
+"Institutional credit at postgraduate research","315","330","335","325","205"
+"Total postgraduate research","112,520","111,850","112,945","110,675","114,405"
+"Masters taught","320,720","345,620","366,935","411,500","484,060"
+"Postgraduate Certificate in Education","24,030","24,960","26,340","25,890","31,175"
+"Other postgraduate taught","75,150","76,040","73,415","71,215","81,585"
+"Institutional credit at postgraduate taught","25,985","23,540","23,070","23,630","32,120"
+"Total postgraduate taught","445,885","470,160","489,765","532,235","628,940"
+"Total postgraduate","558,410","582,010","602,710","642,915","743,340"
+"Undergraduate"
+"First degree","1,630,790","1,657,020","1,690,225","1,734,775","1,847,635"
+"Foundation degree","38,100","35,045","33,630","31,520","30,880"
+"HNC/HND","29,350","28,240","23,615","20,985","20,540"
+"Professional Graduate Certificate in Education","1,730","1,375","1,100","1,000","1,175"
+"Other undergraduate","65,485","58,060","54,130","55,065","63,950"
+"Institutional credit at undergraduate","53,115","52,995","51,140","46,120","44,345"
+"Total other undergraduate","187,775","175,715","163,615","154,695","160,890"
+"Total undergraduate","1,818,565","1,832,735","1,853,840","1,889,475","2,008,525"
+"Total","2,376,975","2,414,745","2,456,545","2,532,385","2,751,865"
