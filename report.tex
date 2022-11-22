@@ -9,7 +9,24 @@ This time series will not contain all of the data from the previous time periods
 The data for the stock prices has come from kaggle and contains stock data for AT&T between the years 2000 and 2020.
 
 \section{Methodology and Dataset}
-The AT&T stock dataset contains a lot of data about its stock, this includes things like...
+Some of the key data in this dataset is: The date (DATE)
+The volume of the stock (VOL), this is the amount of shares that were traded on that day. If a stock has a high volume then it means that shares for that stock changed hands a lot.
+Opening price (OPENPRC), this is the value that the stock was first traded at on that day.
+The asking high (ASKHI), this is the highest asking price for the stock on that day. The asking price of a seller is the lowest price that they will sell their share for. This makes the ASKHI the theoretical maximum that the stock was worth that day.
+The lowest bid on the stock (BIDLO), this is the lowest bid that was put on the stock in that day. A bid is the highest price that someone is willing to pay for the stock. This makes the BIDLO the theoretical minimum a stock was worth that day.
+the closing price of the stock (PRC). this is the final price that the stock was traded at during the day.
+An interesting combined datapoint that could be included is the liquidity of the stock, this could be calculated using the ASKHI and the BIDLO and is a representation of how volatile the price of the stock is.
+
+these are the data points that will be the most useful when we are trying to predict a stocks future values.
+When we are creating a model for predicting the future of the stock we dont have to worry about things in this dataset like:
+PERMNO which is just a unique identification number for the shares that are being traded, this will be the same over all the datapoints and so is useless to include in our model.
+The same justification can be used to remove the company name (COMNAM), TICKER, CUSIP, NCUSIP, PERMCO, SHRCD, ISSUNO, EXCHCD, SICCD, HSICCD, PRIMEXCH, TRDSTAT, SECSTAT
+
+the following datapoints are not complete for all entries but when they are present they are identical across all entries and will therefore be discarded for this reseach question: SHRCLS, HSICMG, HSICIG, NAMEENDT, TSYMBOL NAICS
+
+In this dataset there are 2 companies that have their stock data listed so the research question can be asked for both independantly. Another hyperparameter that we can adjust in our model is how many time steps back we feed it to get our predictions. it will be interesting to see how it changes given more data and possibly at what point more data stops improving the mdoel.
+
+%liquidity: the difference between the ASKHI and the BIDLO could be a useful thing to have when predicting stock prices
 
 i will be using the following pieces of data...
 for the following reasons...
