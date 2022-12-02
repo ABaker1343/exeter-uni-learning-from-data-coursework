@@ -1,12 +1,13 @@
 \documentclass{report}
+\usepackage{tabularx, caption}
 
 \begin{document}
 
 \section{Introduction}
-For this CA I will be investigating the AT&T stock prices dataset.
+For this CA I will be investigating the AT\&T stock prices dataset.
 I will be aiming to anwser the following question: Can I predict the future price of a stock based on a time series of previous stock data.
 This time series will not contain all of the data from the previous time periods and the specific data that will be used will be chosen as part of my hyperparameter selection.
-The data for the stock prices has come from kaggle and contains stock data for AT&T between the years 2000 and 2020.
+The data for the stock prices has come from kaggle and contains stock data for AT\&T between the years 2000 and 2020.
 
 \section{Methodology and Dataset}
 Some of the key data in this dataset is: The date (DATE)
@@ -32,6 +33,56 @@ i will be using the following pieces of data...
 for the following reasons...
 
 \section{Results}
+
+For this project I have used Linear regression and Lasso regression and Ridge regression to investigate the impact of stronger regularisation on my research question.
+For my initial model I had chosen to include all the data that i have deemed important in the section above for 5 previous days on the time series. This resulted in accurate predictions for just 1 day into the future. This was also the case with bot ridge and lasso regression with linear and ridge regression having almost identical mean squared error and lasso falling just a little behind
+
+\begin{minipage} {\linewidth}
+\bigskip
+\centering
+\captionof{table}{Means Squared Error for predictions 1 day into the future using all important data}
+\begin{tabular}{c c}
+    Algorithm & MSE \\
+    Linear Regression & 0.3135 \\
+    Lasso Regression & 0.3994 \\
+    Ridge Regression & 0.3135
+\end{tabular}
+\bigskip
+\end{minipage}
+
+For the next set of models I removed some of the data and only left what I thought would be the most impactful for predicting the future price of the stock.
+This was PRC VOL and LIQ (liquidity).
+Doing this did not improve my results for any of the models when compared to using all of the available data.
+
+\begin{minipage} {\linewidth}
+\bigskip
+\centering
+\captionof{table}{Means Squared Error for predictions 1 day into the future using all important data}
+\begin{tabular}{c c}
+    Algorithm & MSE \\
+    Linear Regression & 0.3143 \\
+    Lasso Regression & 0.4102 \\
+    Ridge Regression & 0.3143
+\end{tabular}
+\bigskip
+\end{minipage}
+
+Predicting one day into the future isnt very useful to us as the timeframe is so short that we can resonably predict one day ourselves. This means that we have to extrapolate further if we want to have our model be more useful.
+With this further extrapolation comes more error in our model.
+When increasing the time frame we still see that linear and ridge regression perform very similarly with lasso regression falling slightly behind however, this time there is an order of magnitude more error than from our one day predictions
+
+\begin{minipage} {\linewidth}
+\bigskip
+\centering
+\captionof{table}{Means Squared Error for predictions 1 day into the future using all important data}
+\begin{tabular}{c c}
+    Algorithm & MSE \\
+    Linear Regression & 2.6592 \\
+    Lasso Regression & 2.7783 \\
+    Ridge Regression & 2.6591
+\end{tabular}
+\bigskip
+\end{minipage}
 
 % its obvious that given the close price of the previous day we can predict the price of the next day because they will be very close so we should try and predict further into the future
 
