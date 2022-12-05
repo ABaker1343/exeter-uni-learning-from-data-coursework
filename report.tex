@@ -29,8 +29,7 @@ In this dataset there are 2 companies that have their stock data listed so the r
 
 %liquidity: the difference between the ASKHI and the BIDLO could be a useful thing to have when predicting stock prices
 
-i will be using the following pieces of data...
-for the following reasons...
+for this project I have identified the important data to be DATE, VOL, OPENPRC, ASKHI, BIDLO, PRC and liquidity. This is because they are the features that impact how much the stock is going to be traded at and they are all complete sets if data for all of the stock price snapshots. In the project however, I will reduce the number down further to try and create a more regularised model as we dont want to include the data if it doesn't actually end up contributing much to our model.
 
 \section{Results}
 
@@ -75,16 +74,38 @@ When increasing the time frame we still see that linear and ridge regression per
 \bigskip
 \centering
 \captionof{table}{Means Squared Error for predictions 1 day into the future using all important data}
-\begin{tabular}{c c}
-    Algorithm & MSE \\
-    Linear Regression & 2.6592 \\
-    Lasso Regression & 2.7783 \\
-    Ridge Regression & 2.6591
+\begin{tabular}{c c c}
+    Algorithm & MSE 10 days & MSE 100 days \\
+    Linear Regression & 2.6592, & 16.8129 \\
+    Lasso Regression & 2.7783 & 16.7768 \\
+    Ridge Regression & 2.6591 & 18.3947
 \end{tabular}
 \bigskip
 \end{minipage}
 
-% its obvious that given the close price of the previous day we can predict the price of the next day because they will be very close so we should try and predict further into the future
+I also tried making predictions based on more of the time series, i tried using a two week period of the time series instead of five days. This did not produce results that were significantly better.
+
+\begin{minipage} {\linewidth}
+\bigskip
+\centering
+\captionof{table}{Means Squared Error for predictions 1 day into the future using all important data}
+\begin{tabular}{c c c}
+    Algorithm & Prediction with 5 days data & Prediction with 14 days data \\
+    Linear Regression & 16.8129 & 17.0435\\
+    Lasso Regression & 2.7783 & 16.9155\\
+    Ridge Regression & 2.6591 & 17.0176
+\end{tabular}
+\bigskip
+\end{minipage}
+
+Overall for this dataset it seems as thought linear regression performs the best for predicting future values across the board and so that would have to be the model that I would recommend. althought ridge regression was a close second and offers more regularisation in your model and so in a different dataset could be a better choice and is definitely worth trying.
+For this dataset Lasso regression performed quite poorly, especcially when using normalized data as the accuracy of Lasso regression became unusably bad. (~48 MSE when predicting one day into the future).
+Overall I think these models are accurate when you are not extrapolating too far. The results for the predictions 10 days into the futre are not too erroneous and could be used. However, once you start predicting 100 days your error is too large to use. Even though the error for each prediction would be about 4 units the data we are trying toA predict for was generally between 25 and 55 units making these errors quite large proportionally.
+
+\section{Discussion}
+
+The next steps in analysing this dataset would be to try a different type of model, perhaps a neural network would be able to capture something in the data that would help the model to predict further into the future with more accuracy and maybe allowing for more complex relationships between features.
+
 
 \section{Discussion}
 
