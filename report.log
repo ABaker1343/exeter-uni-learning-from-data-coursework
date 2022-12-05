@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.12)  2 DEC 2022 11:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.9)  5 DEC 2022 14:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**report.tex
+**report
 (./report.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-10>
@@ -68,10 +68,38 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count195
 \c@continuedfloat=\count196
 )
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count197
+\float@exts=\toks19
+\float@box=\box52
+\@float@everytoks=\toks20
+\@floatcapt=\box53
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
+)
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count197
-\l__pdf_internal_box=\box52
+\l__color_backend_stack_int=\count198
+\l__pdf_internal_box=\box54
 ) (./report.aux)
 \openout1 = `report.aux'.
 
@@ -90,44 +118,89 @@ LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-[1
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count199
+\scratchdimen=\dimen156
+\scratchbox=\box55
+\nofMPsegments=\count266
+\nofMParguments=\count267
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count268
+\MPscratchDim=\dimen157
+\MPnumerator=\count269
+\makeMPintoPDFobject=\count270
+\everyMPtoPDFconversion=\toks22
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 44.
+(Font)              <7> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 44.
+(Font)              <5> on input line 43.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 40--52
+Overfull \hbox (15.0pt too wide) in paragraph at lines 39--51
 []$[]$ 
  []
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 57--69
+Overfull \hbox (15.0pt too wide) in paragraph at lines 56--68
 []$[]$ 
  []
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 74--86
+Overfull \hbox (15.0pt too wide) in paragraph at lines 73--85
 []$[]$ 
  []
 
-[2] [3] (./report.aux) ) 
+[2]
+<predicting_into_future_plot.png, id=11, 406.8801pt x 328.8285pt>
+File: predicting_into_future_plot.png Graphic file (type png)
+<use predicting_into_future_plot.png>
+Package pdftex.def Info: predicting_into_future_plot.png  used on input line 91
+.
+(pdftex.def)             Requested size: 203.43954pt x 164.41385pt.
+
+Overfull \hbox (17.4451pt too wide) in paragraph at lines 100--107
+ [][] 
+ []
+
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 96--108
+[]$[]$ 
+ []
+
+<varying_length_plot.png, id=13, 423.5022pt x 328.8285pt>
+File: varying_length_plot.png Graphic file (type png)
+<use varying_length_plot.png>
+Package pdftex.def Info: varying_length_plot.png  used on input line 114.
+(pdftex.def)             Requested size: 211.75056pt x 164.41385pt.
+[3 <./predicting_into_future_plot.png>] [4 <./varying_length_plot.png>]
+(./report.aux) ) 
 Here is how much of TeX's memory you used:
- 1946 strings out of 478238
- 36944 string characters out of 5850455
- 339449 words of memory out of 5000000
- 20249 multiletter control sequences out of 15000+600000
+ 2828 strings out of 478238
+ 50395 string characters out of 5850456
+ 340529 words of memory out of 5000000
+ 21095 multiletter control sequences out of 15000+600000
  469864 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,8n,63p,408b,250s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on report.pdf (3 pages, 41960 bytes).
+ 55i,8n,63p,514b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on report.pdf (4 pages, 83983 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
- 14 compressed objects within 1 object stream
+ 32 PDF objects out of 1000 (max. 8388607)
+ 17 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,16 +1,16 @@
 \documentclass{report}
-\usepackage{tabularx, caption}
+\usepackage{tabularx, caption, float, graphicx}
 
 \begin{document}
 
 \section{Introduction}
-For this CA I will be investigating the AT\&T stock prices dataset.
-I will be aiming to anwser the following question: Can I predict the future price of a stock based on a time series of previous stock data.
-This time series will not contain all of the data from the previous time periods and the specific data that will be used will be chosen as part of my hyperparameter selection.
+For this CA I will be investigating the AT\&T stock prices data set.
+I will be aiming to answer the following question: Can I predict the future price of a stock based on a time series of previous stock data.
+This time series will not contain all of the data from the previous time periods and the specific data that will be used will be chosen as part of my hyper-parameter selection.
 The data for the stock prices has come from kaggle and contains stock data for AT\&T between the years 2000 and 2020.
 
-\section{Methodology and Dataset}
-Some of the key data in this dataset is: The date (DATE)
+\section{Methodology and Data set}
+Some of the key data in this data set is: The date (DATE)
 The volume of the stock (VOL), this is the amount of shares that were traded on that day. If a stock has a high volume then it means that shares for that stock changed hands a lot.
 Opening price (OPENPRC), this is the value that the stock was first traded at on that day.
 The asking high (ASKHI), this is the highest asking price for the stock on that day. The asking price of a seller is the lowest price that they will sell their share for. This makes the ASKHI the theoretical maximum that the stock was worth that day.
@@ -19,17 +19,17 @@ the closing price of the stock (PRC). this is the final price that the stock was
 An interesting combined datapoint that could be included is the liquidity of the stock, this could be calculated using the ASKHI and the BIDLO and is a representation of how volatile the price of the stock is.
 
 these are the data points that will be the most useful when we are trying to predict a stocks future values.
-When we are creating a model for predicting the future of the stock we dont have to worry about things in this dataset like:
-PERMNO which is just a unique identification number for the shares that are being traded, this will be the same over all the datapoints and so is useless to include in our model.
+When we are creating a model for predicting the future of the stock we don't have to worry about things in this data set like:
+PERMNO which is just a unique identification number for the shares that are being traded, this will be the same over all the data points and so is useless to include in our model.
 The same justification can be used to remove the company name (COMNAM), TICKER, CUSIP, NCUSIP, PERMCO, SHRCD, ISSUNO, EXCHCD, SICCD, HSICCD, PRIMEXCH, TRDSTAT, SECSTAT
 
-the following datapoints are not complete for all entries but when they are present they are identical across all entries and will therefore be discarded for this reseach question: SHRCLS, HSICMG, HSICIG, NAMEENDT, TSYMBOL NAICS
+the following data points are not complete for all entries but when they are present they are identical across all entries and will therefore be discarded for this reseach question: SHRCLS, HSICMG, HSICIG, NAMEENDT, TSYMBOL NAICS
 
-In this dataset there are 2 companies that have their stock data listed so the research question can be asked for both independantly. Another hyperparameter that we can adjust in our model is how many time steps back we feed it to get our predictions. it will be interesting to see how it changes given more data and possibly at what point more data stops improving the mdoel.
+In this data set there are 2 companies that have their stock data listed so the research question can be asked for both independantly. Another hyper-parameter that we can adjust in our model is how many time steps back we feed it to get our predictions. it will be interesting to see how it changes given more data and possibly at what point more data stops improving the mdoel.
 
 %liquidity: the difference between the ASKHI and the BIDLO could be a useful thing to have when predicting stock prices
 
-for this project I have identified the important data to be DATE, VOL, OPENPRC, ASKHI, BIDLO, PRC and liquidity. This is because they are the features that impact how much the stock is going to be traded at and they are all complete sets if data for all of the stock price snapshots. In the project however, I will reduce the number down further to try and create a more regularised model as we dont want to include the data if it doesn't actually end up contributing much to our model.
+for this project I have identified the important data to be DATE, VOL, OPENPRC, ASKHI, BIDLO, PRC and liquidity. This is because they are the features that impact how much the stock is going to be traded at and they are all complete sets if data for all of the stock price snapshots. In the project however, I will reduce the number down further to try and create a more regularised model as we don't want to include the data if it doesn't actually end up contributing much to our model.
 
 \section{Results}
 
@@ -66,7 +66,7 @@ Doing this did not improve my results for any of the models when compared to usi
 \bigskip
 \end{minipage}
 
-Predicting one day into the future isnt very useful to us as the timeframe is so short that we can resonably predict one day ourselves. This means that we have to extrapolate further if we want to have our model be more useful.
+Predicting one day into the future isn't very useful to us as the timeframe is so short that we can reasonably predict one day ourselves. This means that we have to extrapolate further if we want to have our model be more useful.
 With this further extrapolation comes more error in our model.
 When increasing the time frame we still see that linear and ridge regression perform very similarly with lasso regression falling slightly behind however, this time there is an order of magnitude more error than from our one day predictions
 
@@ -88,7 +88,7 @@ You can see how the accuracy changes when extrapolating further in this figure:
 \begin{figure}
     \caption{Plot of MSE based on time series length}
     \centering
-    \includegraphics{predicting_into_the_future.png}
+    \includegraphics[scale=0.5]{predicting_into_future_plot.png}
 \end{figure}
 
 I also tried making predictions based on more of the time series, i tried using a two week period of the time series instead of five days. This did not produce results that were significantly better.
@@ -111,20 +111,17 @@ You can see the effects of changing how far back we plot in this figure:
 \begin{figure}
     \caption{Plot of MSE based on time series length}
     \centering
-    \includegraphics{varying_length_plot.png}
+    \includegraphics[scale=0.5]{varying_length_plot.png}
 \end{figure}
 
-Overall for this dataset it seems as thought linear regression performs the best for predicting future values across the board and so that would have to be the model that I would recommend. althought ridge regression was a close second and offers more regularisation in your model and so in a different dataset could be a better choice and is definitely worth trying.
-For this dataset Lasso regression performed quite poorly, especcially when using normalized data as the accuracy of Lasso regression became unusably bad. (~48 MSE when predicting one day into the future).
-Overall I think these models are accurate when you are not extrapolating too far. The results for the predictions 10 days into the futre are not too erroneous and could be used. However, once you start predicting 100 days your error is too large to use. Even though the error for each prediction would be about 4 units the data we are trying toA predict for was generally between 25 and 55 units making these errors quite large proportionally.
+Overall for this data set it seems as thought linear regression performs the best for predicting future values across the board and so that would have to be the model that I would recommend. althought ridge regression was a close second and offers more regularisation in your model and so in a different data set could be a better choice and is definitely worth trying.
+For this data set Lasso regression performed quite poorly, especially when using normalized data as the accuracy of Lasso regression became unusably bad. (~48 MSE when predicting one day into the future).
+Overall I think these models are accurate when you are not extrapolating too far. The results for the predictions 10 days into the future are not too erroneous and could be used. However, once you start predicting 100 days your error is too large to use. Even though the error for each prediction would be about 4 units the data we are trying toA predict for was generally between 25 and 55 units making these errors quite large proportionally.
 
 \section{Discussion}
 
 To conclude I think that we can predict the future price of the stock based on the time series, however this has limitations. The major limitation being the fact that if we want our data to be more useful to us we have to extrapolate further which leads to more error in our predictions and a less reliable model.
 
-The next steps in analysing this dataset would be to try a different type of model, perhaps a neural network would be able to capture something in the data that would help the model to predict further into the future with more accuracy and maybe allowing for more complex relationships between features.
-
-
-\section{Discussion}
+The next steps in analysing this data set would be to try a different type of model, perhaps a neural network would be able to capture something in the data that would help the model to predict further into the future with more accuracy and maybe allowing for more complex relationships between features.
 
 \end{document}
