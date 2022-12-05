@@ -83,6 +83,14 @@ When increasing the time frame we still see that linear and ridge regression per
 \bigskip
 \end{minipage}
 
+You can see how the accuracy changes when extrapolating further in this figure:
+
+\begin{figure}
+    \caption{Plot of MSE based on time series length}
+    \centering
+    \includegraphics{predicting_into_the_future.png}
+\end{figure}
+
 I also tried making predictions based on more of the time series, i tried using a two week period of the time series instead of five days. This did not produce results that were significantly better.
 
 \begin{minipage} {\linewidth}
@@ -98,11 +106,21 @@ I also tried making predictions based on more of the time series, i tried using 
 \bigskip
 \end{minipage}
 
+You can see the effects of changing how far back we plot in this figure:
+
+\begin{figure}
+    \caption{Plot of MSE based on time series length}
+    \centering
+    \includegraphics{varying_length_plot.png}
+\end{figure}
+
 Overall for this dataset it seems as thought linear regression performs the best for predicting future values across the board and so that would have to be the model that I would recommend. althought ridge regression was a close second and offers more regularisation in your model and so in a different dataset could be a better choice and is definitely worth trying.
 For this dataset Lasso regression performed quite poorly, especcially when using normalized data as the accuracy of Lasso regression became unusably bad. (~48 MSE when predicting one day into the future).
 Overall I think these models are accurate when you are not extrapolating too far. The results for the predictions 10 days into the futre are not too erroneous and could be used. However, once you start predicting 100 days your error is too large to use. Even though the error for each prediction would be about 4 units the data we are trying toA predict for was generally between 25 and 55 units making these errors quite large proportionally.
 
 \section{Discussion}
+
+To conclude I think that we can predict the future price of the stock based on the time series, however this has limitations. The major limitation being the fact that if we want our data to be more useful to us we have to extrapolate further which leads to more error in our predictions and a less reliable model.
 
 The next steps in analysing this dataset would be to try a different type of model, perhaps a neural network would be able to capture something in the data that would help the model to predict further into the future with more accuracy and maybe allowing for more complex relationships between features.
 
