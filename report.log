@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.12)  6 DEC 2022 10:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.12)  6 DEC 2022 10:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**report
+**report.tex
 (./report.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-10>
@@ -164,63 +164,67 @@ e
 )) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<LIQ.png, id=8, 406.1574pt x 313.6518pt>
+File: LIQ.png Graphic file (type png)
+<use LIQ.png>
+Package pdftex.def Info: LIQ.png  used on input line 40.
+(pdftex.def)             Requested size: 203.0782pt x 156.8255pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 43.
+(Font)              <7> on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 43.
+(Font)              <5> on input line 51.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 39--51
+Overfull \hbox (15.0pt too wide) in paragraph at lines 47--59
 []$[]$ 
  []
 
-
-Overfull \hbox (15.0pt too wide) in paragraph at lines 56--68
+[2 <./LIQ.png>]
+Overfull \hbox (15.0pt too wide) in paragraph at lines 64--76
 []$[]$ 
  []
 
-[2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 87.
+(Font)              <9> on input line 95.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 87.
+(Font)              <6> on input line 95.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 74--90
+Overfull \hbox (15.0pt too wide) in paragraph at lines 82--98
 []$[]$ 
  []
 
-<10_day_regression.png, id=11, 427.1157pt x 327.3831pt>
+<10_day_regression.png, id=14, 427.1157pt x 327.3831pt>
 File: 10_day_regression.png Graphic file (type png)
 <use 10_day_regression.png>
-Package pdftex.def Info: 10_day_regression.png  used on input line 94.
+Package pdftex.def Info: 10_day_regression.png  used on input line 102.
 (pdftex.def)             Requested size: 213.55733pt x 163.69115pt.
-<predicting_into_future_plot.png, id=13, 406.8801pt x 328.8285pt>
+<predicting_into_future_plot.png, id=15, 406.8801pt x 328.8285pt>
 File: predicting_into_future_plot.png Graphic file (type png)
 <use predicting_into_future_plot.png>
-Package pdftex.def Info: predicting_into_future_plot.png  used on input line 10
-3.
+Package pdftex.def Info: predicting_into_future_plot.png  used on input line 11
+1.
 (pdftex.def)             Requested size: 203.43954pt x 164.41385pt.
-<varying_length_plot.png, id=14, 423.5022pt x 328.8285pt>
+<varying_length_plot.png, id=16, 423.5022pt x 328.8285pt>
 File: varying_length_plot.png Graphic file (type png)
 <use varying_length_plot.png>
-Package pdftex.def Info: varying_length_plot.png  used on input line 114.
+Package pdftex.def Info: varying_length_plot.png  used on input line 122.
 (pdftex.def)             Requested size: 211.75056pt x 164.41385pt.
-[3 <./10_day_regression.png>] [4 <./predicting_into_future_plot.png> <./varying
-_length_plot.png>] [5] (./report.aux) ) 
+[3] [4 <./10_day_regression.png> <./predicting_into_future_plot.png>] [5 <./var
+ying_length_plot.png>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 2926 strings out of 478238
- 52034 string characters out of 5850455
- 341320 words of memory out of 5000000
- 21182 multiletter control sequences out of 15000+600000
+ 2934 strings out of 478238
+ 52123 string characters out of 5850455
+ 344320 words of memory out of 5000000
+ 21189 multiletter control sequences out of 15000+600000
  471687 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,63p,515b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,9n,63p,558b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on report.pdf (5 pages, 131627 bytes).
+Output written on report.pdf (5 pages, 153320 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
+ 44 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
